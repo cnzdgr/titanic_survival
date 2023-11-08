@@ -13,7 +13,7 @@ from fastapi.responses import HTMLResponse
 root_router = APIRouter()
 
 app = FastAPI(
-    title="/api/v1")
+    title="/api/titanic_survival")
 
 @root_router.get("/")
 def index(request: Request) -> Any:
