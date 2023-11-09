@@ -3,6 +3,7 @@ training_data_file: train.csv
 test_data_file: test.csv
 target: Survived
 model_name: titanic_classification_model
+version: '0.0.1'
 model_save_file: regression_model_output_v
 vars_to_check_existance:
   - Cabin

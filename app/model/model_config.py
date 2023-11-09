@@ -22,6 +22,7 @@ class AppConfig(BaseModel):
     training_data_file: str
     test_data_file: str
     model_save_file: str
+    version: str
 
 
 class ModelConfig(BaseModel):
@@ -80,3 +81,5 @@ def validate_config(parsed_config: YAML = None) -> Config:
                      )
 
     return _config
+
+config = validate_config()
