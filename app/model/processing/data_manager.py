@@ -50,6 +50,13 @@ def save_model(*, model_to_keep: Pipeline) -> None:
     joblib.dump(model_to_keep, save_path)
     
 
+def load_model(*, file_name: str) -> Pipeline:
+    """Load a persisted pipeline."""
+
+    file_path = TRAINED_MODEL_DIR / file_name
+    return joblib.load(filename=file_path)
+
+
 def remove_old_model(*, files_to_keep: list[str]) -> None:
     '''
     To remove old model/s (output of the pipeline).
