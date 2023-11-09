@@ -1,0 +1,25 @@
+---
+training_data_file: train.csv
+test_data_file: test.csv
+target: Survived
+model_name: titanic_classification_model
+model_save_file: regression_model_output_v
+vars_to_check_existance:
+  - Cabin
+numerical_vars_with_na:
+  - Age
+vars_to_log_transform:
+  - Fare
+vars_to_binarize:
+  - Sex
+features:
+  - Cabin
+  - Fare
+  - Sex
+  - Age
+test_size: 0.2
+random_state: 0
+solver: liblinear
+penalty: l1
+alpha: 0.001
+
