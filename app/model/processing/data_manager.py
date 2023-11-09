@@ -42,7 +42,7 @@ def save_model(*, model_to_keep: Pipeline) -> None:
     By this way, we will be sure there is only 1 model 
     '''   
 
-    save_file_name = f"{config.app_config.model_save_file}{config.app_config.version}.pkl"
+    save_file_name = f"{config.a_config.model_save_file}{config.a_config.version}.pkl"
     save_path = TRAINED_MODEL_DIR / save_file_name
 
     remove_old_model(files_to_keep=[save_file_name])

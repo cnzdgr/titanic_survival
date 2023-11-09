@@ -13,6 +13,7 @@ from sklearn.preprocessing import MinMaxScaler
 d = os.getcwd()
 par_2 = os.path.dirname(os.path.dirname(d))
 sys.path.append(par_2)
+print(par_2)
 
 from app.model.model_config import config
 from app.model.processing import custom_preprocess as cp
