@@ -5,6 +5,7 @@ Module responsible from
 '''
 # Adding the ROOT path 
 from pathlib import Path
+from typing import List
 import sys
 import os
 d = os.getcwd()
@@ -57,7 +58,7 @@ def load_model(*, file_name: str) -> Pipeline:
     return joblib.load(filename=file_path)
 
 
-def remove_old_model(*, files_to_keep: list[str]) -> None:
+def remove_old_model(*, files_to_keep: List[str]) -> None:
     '''
     To remove old model/s (output of the pipeline).
     To be sure there is one-to-one mapping between package version

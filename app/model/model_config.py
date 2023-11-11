@@ -4,7 +4,7 @@ And combine/validate all model configuations
 '''
 
 from pathlib import Path
-
+from typing import List
 from pydantic import BaseModel
 from strictyaml import YAML, load
 
@@ -28,15 +28,15 @@ class AppConfig(BaseModel):
 class ModelConfig(BaseModel):
     # Model-dependent configuration
     target: str
-    features: list[str]
+    features: List[str]
     test_size: float
     random_state: int
     penalty: str
     solver: str
-    vars_to_check_existance: list[str]
-    numerical_vars_with_na: list[str]
-    vars_to_log_transform: list[str]
-    vars_to_binarize: list[str]
+    vars_to_check_existance: List[str]
+    numerical_vars_with_na: List[str]
+    vars_to_log_transform: List[str]
+    vars_to_binarize: List[str]
 
 
 
